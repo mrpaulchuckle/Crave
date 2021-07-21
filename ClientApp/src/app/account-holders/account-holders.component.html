@@ -1,0 +1,27 @@
+<h1 id="tableLabel">Account Holders</h1>
+
+<p *ngIf="!accountHolders"><em>Loading...</em></p>
+
+<div *ngIf="accountHolders">
+
+  <table class='table table-striped' aria-labelledby="tableLabel">
+    <thead>
+      <tr>
+        <th class="hidden-column">ID</th>
+        <th>IBAN</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let holder of accountHolders" routerLink="/account-holder/{{holder.id}}" class="gridRow">
+        <td class="hidden-column">{{ holder.id }}</td>
+        <td>{{ holder.iban }}</td>
+        <td>{{ holder.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="buttons">
+  <button type="button" class="btn btn-primary" [routerLink]="['/account-holder-form']">Add</button>
+</div>
+

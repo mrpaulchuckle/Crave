@@ -1,0 +1,19 @@
+<div *ngIf="accountHolder">
+
+  <h2>{{accountHolder.name}} Details</h2>
+  <div class="fields">
+    <div>
+      <label for="accountHolder-iban">IBAN</label>
+      <input id="accountHolder-iban" [(ngModel)]="accountHolder.iban" placeholder="iban">
+    </div>
+    <div>
+      <label for="accountHolder-name">Name</label>
+      <input id="accountHolder-name" [(ngModel)]="accountHolder.name" placeholder="name">
+    </div>
+  </div>
+
+</div>
+<div class="buttons">
+  <button type="button" class="btn btn-success" (click)="updateAccountHolder()">Save</button>
+  <button type="button" class="btn btn-danger"  (click)="deleteAccountHolder()">Delete</button>
+</div>

@@ -1,0 +1,5 @@
+.gridRow:hover {
+  background-color: #1b6ec2;
+  cursor: pointer;
+  color: white;
+}

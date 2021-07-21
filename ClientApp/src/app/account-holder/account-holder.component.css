@@ -1,0 +1,11 @@
+label {
+  width: 3em;
+}
+
+.fields {
+    margin: 1em 0 1em 0;
+}
+
+.buttons > button {
+    margin-right: 1em;
+}

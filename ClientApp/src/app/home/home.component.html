@@ -1,0 +1,7 @@
+<h2>Top Account Holders</h2>
+<div class="account-holders-menu">
+  <a *ngFor="let holder of accountHolders"
+     routerLink="/account-holder/{{holder.id}}">
+    {{holder.name}}
+  </a>
+</div>
